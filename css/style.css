@@ -18,3 +18,40 @@ body {
 .snap > div {
   scroll-snap-align: center;
 }
+.masonry-grid {
+	display: flex;
+}
+
+.masonry-grid-col {
+	flex: 1;
+	padding: 0 .1em;
+}
+
+
+.masonry-grid-col--2, .masonry-grid-col--3 {
+  display: none;
+}
+
+.masonry-img {
+  margin-bottom: .1em;
+}
+
+@media (min-width: 760px) {
+  .masonry-grid-col--2 {
+    display: block;
+  }
+
+  .masonry-grid-col {
+    padding: 0 .5em;
+  }
+
+  .masonry-img {
+    margin-bottom: .8em;
+  }
+}
+
+@media (min-width: 1080px) {
+	.masonry-grid-col--3 {
+		display: block;
+	}
+}

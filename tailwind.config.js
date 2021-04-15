@@ -8,6 +8,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        "screen-plus": "120vh",
+      },
       borderWidth: {
         "30": "30px",
         "60": "60px",
@@ -21,13 +24,18 @@ module.exports = {
         // 'footer-texture': "url('/img/footer-texture.png')",
        }),
       colors: {
-        "primary": "#4b2b80",
-        "secondary": "#65c880",
-        "accent": "#807171"
+        "primary": "#00a843",
+        "secondary": "#340e71",
+        "accent": "#fff700",
+        "background": "#fdfcfa"
       },
       zIndex: {
-        'n1': -1
-      }
+        'n1': -1,
+        'n2': -2,
+        'n3': -3,
+      },
+      transitionProperty: ['hover'],
+      transitionDuration: ['hover'],
     },
   },
   variants: {

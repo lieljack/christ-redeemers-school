@@ -6,17 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <link href="./output.css" rel="stylesheet" />
   <link href="./css/style.css" rel="stylesheet" />
   <title>Christ Redeemers International School | Home</title>
 </head>
 
 <body>
-  <section style="background-image: url('./images/slide2.jpg')" class="relative h-screen bg-no-repeat bg-cover">
-    <section class="bg-black bg-opacity-50 h-screen w-full absolute flex flex-col">
-      <header x-data="{ mobileMenuOpen : false }"
-        class="md:bg-white md:w-10/12 w-full mt-4 mx-auto flex flex-row px-8 py-5 items-center justify-between shadow-md">
+  <section style="background-image: url('./images/slide2.jpg')" class="relative h-screen md:h-screen-plus bg-no-repeat bg-cover">
+    <div class="absolute w-full">
+    <header x-data="{ mobileMenuOpen : false }"
+        class="bg-white rounded-none md:rounded-full md:w-10/12 w-full mt-0 md:mt-6 mx-auto flex flex-row px-8 py-4 items-center justify-between shadow-md">
         <div class="flex items-center">
           <img src="./images/logo.png" width="30" />
           <p class="ml-2 font-bold text-xl">CRISS</p>
@@ -27,45 +26,60 @@
           </svg>
         </button>
         <nav
-          class="absolute md:relative top-24 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto h-screen md:h-auto bg-white shadow-md md:rounded-none md:shadow-none md:bg-transparent p-8 md:p-0"
+          class="absolute md:relative top-12 left-0 md:top-0 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto h-auto md:h-auto bg-white shadow-md md:rounded-none md:shadow-none md:bg-transparent p-8 md:p-0"
           :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
           <ul
             class="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-8 w-full md:w-auto md:bg-transparent md:p-0">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact</li>
+            <li class="">
+              <a href="./" class="text-secondary font-extrabold">Home</a>
+            </li>
+            <li>
+              <a href="./about/" class="hover:text-green-600">About Us</a>
+            </li>
+            <li>
+              <a href="./contact/" class="hover:text-green-600">Contact Us</a>
+            </li>
+            <li>
+              <a href="./gallery/" class="hover:text-green-600">Gallery</a>
+            </li>
           </ul>
         </nav>
       </header>
-      <div class="m-auto md:mx-32 mx-6">
-        <h1 class="text-center md:text-xl text-lg text-white font-medium">
-          Welcome to <br />
-          <span class="font-extrabold lg:text-6xl md:text-4xl text-3xl">Christ Redeemer's International Secondary
-            School</span>
-        </h1>
+    </div>
+    <section class="bg-black bg-opacity-70 h-full w-full flex flex-col z-20">
+      <div class="my-auto w-2/3 md:w-1/2 md:mx-32 mx-6">
+        <!-- <p class="text-xl font-bold text-white mb-2">Christ Redeemer's international School</p> -->
+        <p class="text-white lg:leading-tight font-extrabold lg:text-6xl text-4xl">We Empower the Winners  of Tomorrow</p>
+        <p class="text-white mb-10 mt-3">Give your child access to quality education.</p>
+        <a href="./contact/" class="bg-primary hover:bg-secondary text-white px-7 py-3 rounded-full font-medium transform hover:scale-125 transition ease-out duration-500 ">Enroll Now</a> 
       </div>
     </section>
   </section>
 
 
-  <section class="md:flex block md:justify-evenly w-full p-8 space-y-10 md:space-y-0 mt-10">
-    <div class="flex flex-row items-center m-2 text-center">
-      <span class="iconify lg:text-5xl md:text-2xl text-primary" data-icon="fa-solid:cross" data-inline="false"></span>
-      <h3 class="font-extrabold lg:text-xl md:text-sm ml-4 uppercase">
-        Faith
-      </h3>
-    </div>
-    <div class="flex flex-row items-center m-2 text-center">
-      <span class="iconify lg:text-5xl md:text-2xl text-primary" data-icon="openmoji:dove" data-inline="false"></span>
-      <h3 class="font-extrabold lg:text-xl md:text-sm ml-4 uppercase">
-        Holiness
-      </h3>
-    </div>
-    <div class="flex flex-row items-center m-2">
-      <span class="iconify lg:text-5xl md:text-2xl text-secondary" data-icon="carbon:book" data-inline="false"></span>
-      <h3 class="font-extrabold lg:text-xl md:text-sm ml-4 uppercase">
-        Knowledge
-      </h3>
+  <section class="mx-12 md:mx-24 mt-32 mb-32">
+    <h3 class="text-center font-bold text-4xl">Our Moto</h3>
+    <hr class="w-16 border-2 border-primary mx-auto my-3">
+    <div class="grid grid-cols-1 md:grid-cols-3 mt-12">
+
+      <div class="p-10 hover:shadow-2xl rounded-xl transition ease-in-out duration-500">
+        <img src="./images/icons/praying.svg" alt="Faith moto" class="h-20 mx-auto">
+        <h3 class="font-bold text-2xl text-center mt-12 mb-3">Faith</h3>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit nemo deserunt, aut magnam possimus natus magni</p>
+      </div>
+
+      <div class="p-10 hover:shadow-2xl rounded-xl transition ease-in-out duration-500">
+        <img src="./images/icons/dove.svg" alt="Holiness moto" class="h-20 mx-auto">
+        <h3 class="font-bold text-2xl text-center mt-12 mb-3">Holiness</h3>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit nemo deserunt, aut magnam possimus natus magni</p>
+      </div>
+
+      <div class="p-10 hover:shadow-2xl rounded-xl transition ease-in-out duration-500">
+        <img src="./images/icons/innovation.svg" alt="Knowledge moto" class="h-20 mx-auto">
+        <h3 class="font-bold text-2xl text-center mt-12 mb-3">Knowledge</h3>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reprehenderit nemo deserunt, aut magnam possimus natus magni</p>
+      </div>
+      
     </div>
   </section>
 
@@ -80,13 +94,12 @@
         <h3
           class="font-extrabold lg:text-4xl text-2xl uppercase mb-3 pl-4 lg:pl-0 border-l-8 lg:border-l-0 border-primary">
           Who Are We</h3>
-        <p>
+        <p class="mb-6">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatem commodi voluptate. Repellendus
           molestias nisi, magni cumque corrupti dolor et, qui facilis officia numquam, minima earum. Reprehenderit
-          quibusdam unde quas. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos voluptatem commodi
-          voluptate. Repellendus molestias nisi, magni cumque corrupti dolor et, qui facilis officia numquam, minima
-          earum. Reprehenderit quibusdam unde quas. ff
+          ..
         </p>
+        <a class="bg-secondary text-xs font-bold uppercase py-2 px-5 rounded-full text-white hover:bg-primary hover:shadow-xl transition duration-700 ease-out">Read More</a>
       </div>
     </div>
   </section>
@@ -100,7 +113,7 @@
         the following;</p>
     </div>
 
-    <div class="block lg:flex items-center relative bg-gray-700">
+    <div class="block lg:flex items-center relative bg-black text-gray-200">
       <h3 class="absolute top-auto right-0 lg:bottom-0 lg:left-0 text-gray-300 opacity-30 text-7xl">01</h3>
       <div class="w-full lg:w-1/2 p-12 lg:pl-24 lg:pr-12">
         <h3 class="font-bold text-2xl mb-4">Good Christian Education</h3>
@@ -111,7 +124,7 @@
       <img src="https://via.placeholder.com/1080x800" alt="" class="w-full lg:w-1/2">
     </div>
 
-    <div class="block lg:flex items-center relative bg-gray-700">
+    <div class="block lg:flex items-center relative bg-black text-gray-200">
       <h3 class="absolute top-0 lg:bottom-0 right-0 text-gray-300 text-7xl opacity-30">02</h3>
       <div class="w-full p-12 lg:w-1/2 lg:pr-24 lg:pl-12">
         <h3 class="font-bold text-2xl mb-4">Christian Education</h3>
@@ -122,7 +135,7 @@
       <img src="https://via.placeholder.com/1080x800" alt="" class="w-full lg:w-1/2 order-first">
     </div>
 
-    <div class="block lg:flex items-center relative bg-gray-700">
+    <div class="block lg:flex items-center relative bg-black text-gray-200">
       <h3 class="absolute top-auto right-0 lg:bottom-0 lg:left-0 text-gray-300 opacity-30 text-7xl">03</h3>
       <div class="w-full lg:w-1/2 p-12 lg:pl-24 lg:pr-12">
         <h3 class="font-bold text-2xl mb-4">Good Christian Education</h3>
@@ -152,36 +165,44 @@
 
   <section class="my-12 bg-cover md:bg-cover bg-center bg-no-repeat flex items-center h-72 md:h-96"
     style="background-image: url('https://source.unsplash.com/qDY9ahp0Mto/1920x1281');">
-    <div class="text-center md:text-right p-8  w-full bg-black md:bg-transparent bg-opacity-20">
+    <div class="text-center md:text-right md:pr-24 pr-8 p-8  w-full bg-black h-full flex flex-col justify-center bg-opacity-40">
       <h3 class="text-sm md:text-xl text-white">Give your child quality education</h3>
       <h3 class="text-4xl md:text-5xl font-extrabold text-white uppercase">Enroll with us today</h3>
     </div>
   </section>
 
 
-  <section class="text-center bg-gray-500 p-12 mb-24 rounded-xl mx-6 md:mx-24 shadow-xl relative mt-24">
+  <section class="text-center bg-secondary text-white p-12 mb-24 rounded-xl mx-6 md:mx-24 shadow-xl relative mt-24">
     <img src="./images/location.png" alt="location" class="absolute h-32 md:-top-10 md:right-0 -top-20 right-0">
     <img src="./images/school.png" alt="location" class="absolute h-32 md:-bottom-10 md:left-0 -bottom-20 -left-10">
     <h3 class="font-medium text-lg">Get in touch today</h3>
     <h3 class="font-extrabold text-4xl mb-5">Visit one of our locations</h3>
-    <button class="rounded bg-primary py-2 px-6 text-sm text-white shadow-md">View Locations</button>
+    <a href="./contact/"  class="rounded-full bg-primary py-2 px-6 text-sm text-white shadow-md hover:transform hover:scale-125">View Locations</a>
   </section>
 
-  <footer class="bg-gray-300 block">
+  <footer class="bg-black block text-gray-100">
     <section class="px-8 pt-16 mb-6 block md:flex md:mx-12 mx-6 ">
       <div class="md:w-2/3">
         <img src="./images/logo.png" alt="CRISS Logo" class="h-24">
-        <h4 class="font-bold text-2xl mt-5">Christ Redeemer's International School</h4>
+        <h4 class="font-bold text-2xl mt-5">Christ Redeemer's <br /> International School</h4>
         <p class="text-sm italic">Moto: Faith, Holiness and Knowledge</p>
       </div>
 
       <div class="mt-12 md:mt-0">
         <h4 class="font-bold text-xl">Links</h4>
         <ul class="space-y-3 mt-3">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Admissions</li>
-          <li>Our Location</li>
+          <li>
+            <a href="./" class="font-extrabold">Home</a>
+          </li>
+          <li>
+            <a href="./about/">About Us</a>
+          </li>
+          <li>
+            <a href="./contact/">Contact</a>
+          </li>
+          <li>
+            <a href="./gallery/">Gallery</a>
+          </li>
         </ul>
       </div>
     </section>
@@ -190,34 +211,6 @@
       <p class="text-sm">Copyright (c) Christ Redeemer's International School 2021</p>
     </div>
   </footer>
-
-  <!-- Governing Board -->
-  <!-- <section class="bg-gray-100 my-24">
-    <div class="mx-12 py-16">
-
-      <h2 class="font-bold text-3xl mb-10">School Governing Board</h2>
-      <div class="flex space-x-5 mb-10">
-        <img src="https://source.unsplash.com/OhKElOkQ3RE/800x900" class="rounded" width="300">
-        <img src="https://source.unsplash.com/OhKElOkQ3RE/800x900" class="rounded" width="300">
-        <img src="https://source.unsplash.com/OhKElOkQ3RE/800x900" class="rounded" width="300">
-        <img src="https://source.unsplash.com/OhKElOkQ3RE/800x900" class="rounded" width="300">
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Event Gallery -->
-  <!-- <section class="flex flex-row my-24 mx-12 items-center">
-    <div class="w-6/12 flex-none">
-      <h1 class="font-extrabold text-6xl">Event Gallery</h1>
-    </div>
-    <div >
-      <div class="grid grid-cols-3 gap-4 items-stretch">
-        <img src="https://source.unsplash.com/e8KIBbJw21A/1080x900" class="rounded" height="50" >
-        <img src="https://source.unsplash.com/e8KIBbJw21A/1080x900" class="rounded" >
-        <img src="https://source.unsplash.com/e8KIBbJw21A/1080x900" class="rounded" >
-      </div>
-    </div>
-  </section> -->
 </body>
 
 </html>
