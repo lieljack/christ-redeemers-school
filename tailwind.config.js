@@ -1,9 +1,12 @@
 module.exports = {
-  // mode: 'jit',
+  enabled: true,
+  mode: 'all',
   purge: [
-    // "./src/**/*.css", 
-    // "./**/*.html",
-    // "./index.html"
+    // "src/tailwind.css", 
+    "contact/index.html",
+    "gallery/index.html",
+    "about/index.html",
+    "index.html"
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
