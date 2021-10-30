@@ -1,12 +1,12 @@
 module.exports = {
-  // enabled: true,
+  enabled: true,
   mode: 'all',
   purge: [
-    // "src/tailwind.css", 
-    // "contact/index.html",
-    // "gallery/index.html",
-    // "about/index.html",
-    // "index.html"
+    "src/tailwind.css", 
+    "contact/index.html",
+    "gallery/index.html",
+    "about/index.html",
+    "index.html"
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -48,6 +48,6 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss'),
-    // require('autoprefixer'),
+    require('autoprefixer'),
   ],
 }
