@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,8 @@
   <link href="../output.css" rel="stylesheet" />
   <link href="../css/style.css" rel="stylesheet" />
 
+  
+
   <!-- favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -16,131 +19,189 @@
   <link rel="manifest" href="../site.webmanifest">
 
   <title>Christ Redeemers International School | About Us</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
+    integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+    integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.extensions.min.js"
+    integrity="sha512-v0jjVvFpZqb1BcXhgLbaBDRKwZ09IpWFZL5NHTNbW9MlSjhZihkxEz2uNeMGd6HuK1qnSEL6JdyTr24ZHlgKow=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
-  <!-- Header -->
-  <section style="background-image: url('https://source.unsplash.com/sjKCc0pqzPs/1920x1280')" class="relative h-96 bg-no-repeat bg-cover">
-    <section class="bg-black bg-opacity-50 h-96 w-full absolute flex flex-col">
-      <header x-data="{ mobileMenuOpen : false }"
-        class="bg-white rounded-none md:rounded-full md:w-10/12 w-full mt-0 md:mt-6 mx-auto flex flex-row px-8 py-4 items-center justify-between shadow-md">
-        <div class="flex items-center">
-          <img src="../images/logo.png" width="30" />
-          <a href="../" class="ml-2 font-bold text-xl">CRISS</a>
+  <div id="fullpage">
+    <div class="section h-screen">
+      <!-- Header -->
+      <section style="background-image: url('https://source.unsplash.com/sjKCc0pqzPs/1920x1280')"
+        class="relative h-screen bg-no-repeat bg-cover">
+        <section class="bg-black bg-opacity-50 h-screen w-full absolute flex flex-col">
+          <header x-data="{ mobileMenuOpen : false }"
+            class="bg-white rounded-none md:rounded-full md:w-10/12 w-full mt-0 md:mt-6 mx-auto flex flex-row px-8 py-4 items-center justify-between shadow-md">
+            <div class="flex items-center">
+              <img src="../images/logo.png" width="30" />
+              <a href="../" class="ml-2 font-bold text-xl">CRISS</a>
+            </div>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block md:hidden w-8 h-8 text-gray-600 p-1">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+              </svg>
+            </button>
+            <nav
+              class="absolute md:relative top-12 left-0 md:top-0 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto h-auto md:h-auto bg-white shadow-md md:rounded-none md:shadow-none md:bg-transparent p-8 md:p-0"
+              :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
+              <ul
+                class="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-8 w-full md:w-auto md:bg-transparent md:p-0">
+                <li class="">
+                  <a href="../" class="hover:text-green-600">Home</a>
+                </li>
+                <li>
+                  <a href="../about/" class="text-secondary font-extrabold">About Us</a>
+                </li>
+                <li>
+                  <a href="../contact/" class="hover:text-green-600">Contact Us</a>
+                </li>
+                <li>
+                  <a href="../gallery/" class="hover:text-green-600">Gallery</a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <div class="h-full flex items-center justify-center">
+            <h1 class="text-center text-5xl text-white font-extrabold">
+              About Us
+            </h1>
+          </div>
+        </section>
+      </section>
+      <!-- End Header -->
+    </div>
+
+    <div class="section">
+      <div class="flex flex-col px-12 md:flex-row items-center container md:mx-auto">
+        <div class="w-full md:w-2/5">
+          <img src="../images/rccgschool.jpg" alt="" class="rounded-lg">
         </div>
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block md:hidden w-8 h-8 text-gray-600 p-1">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
-          </svg>
-        </button>
-        <nav
-          class="absolute md:relative top-12 left-0 md:top-0 md:flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto h-auto md:h-auto bg-white shadow-md md:rounded-none md:shadow-none md:bg-transparent p-8 md:p-0"
-          :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
-          <ul
-            class="flex flex-col space-y-6 md:space-y-0 md:flex-row md:space-x-8 w-full md:w-auto md:bg-transparent md:p-0">
-            <li class="">
-              <a href="../" class="hover:text-green-600">Home</a>
+        <div class="mx-8 mt-4 w-full md:w-3/5">
+          <p class="text-lg md:text-2xl leading-relaxed">
+            Christ Redeemer's International Secondary School is a Government Approved Christian Secondary School owned
+            by The Redeemed Christian Church of God, Rivers Province 6.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="flex flex-col p-12 md:flex-row items-center container md:mx-auto">
+        <div class="w-full md:w-3/5">
+          <p class="text-lg pb-5 md:pb-0 md:text-2xl leading-relaxed">
+            Our school is concerned with raising godly children through a holistic approach and transformation of our
+            children into academically and spiritually balanced individuals. We are equipped with modern teaching and
+            educational tools that make learning easy.
+          </p>
+        </div>
+        <div class="w-full md:w-2/5">
+          <img src="../images/gallery/IMG_7371.JPG" alt="" class="rounded-lg">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="flex flex-col p-12 md:flex-row items-center container md:mx-auto">
+        <div class="w-full md:w-2/5">
+          <img src="../images/gallery/IMG_20210312_095154.jpg" alt="" class="rounded-lg">
+        </div>
+        <div class="w-full md:w-3/5">
+          <p class="text-lg mx-0 md:mx-8 md:text-2xl leading-relaxed">
+            Notably, we have diligent and passionate academic and non-academic staff as well as a stimulating learning
+            environment. Undoubtedly, the school provides enriched and broad learning opportunities for all students. We
+            offer an intensive and internationally recognised curriculum in addition to other extracurricular activities
+            which produce outstanding results in our students.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="flex flex-col p-12 md:flex-row items-center container md:mx-auto">
+        <div class="w-full md:w-3/5">
+          <p class="text-lg md:text-2xl leading-relaxed">
+            Above all, your interest in the school is quite appreciated as we believe that our prospectus will guide you
+            in making an informed decision regarding your child. We are hopeful that we would see your child at Christ
+            Redeemer's International Secondary School. Register with us today!
+          </p>
+        </div>
+        <div class="w-full md:w-2/5">
+          <img src="../images/gallery/IMG_20210714_083610.jpg" alt="" class="rounded-lg">
+        </div>
+      </div>
+    </div>
+
+    <!-- Block Quote -->
+    <!-- <div class="section relative px-12 md:px-24 overflow-x-hidden">
+      <div class="absolute" data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="30">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 opacity-10" viewBox="0 0 24 24">
+          <path
+            d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+        </svg>
+      </div>
+      <hr class="w-32 md:w-64 border-2 border-primary mx-auto" data-aos="zoom-out" data-aos-duration="1400"
+        data-aos-delay="10">
+      <p class="text-center text-3xl md:text-5xl font-medium mt-12 leading-normal mb-12" data-aos="fade">When you
+        educate one person you can change a life, when you educate many you can change the world</p>
+      <p class="text-lg italic text-center" data-aos="zoom-in" data-aos-delay="10">Shai Reshef</p>
+    </div> -->
+
+    <footer class="bg-black block text-gray-100 section">
+      <section class="px-8 pt-16 mb-6 block md:flex md:mx-12 mx-6 ">
+        <div class="md:w-2/3">
+          <img src="../images/logo.png" alt="CRISS Logo" class="h-24">
+          <h4 class="font-bold text-2xl mt-5">Christ Redeemer's <br /> International Secondary School</h4>
+          <p class="text-sm italic">Moto: Faith, Holiness and Knowledge</p>
+        </div>
+
+        <div class="mt-12 md:mt-0">
+          <h4 class="font-bold text-xl">Links</h4>
+          <ul class="space-y-3 mt-3">
+            <li>
+              <a href="../">Home</a>
             </li>
             <li>
-              <a href="../about/" class="text-secondary font-extrabold">About Us</a>
+              <a href="./" class="font-extrabold">About Us</a>
             </li>
             <li>
-              <a href="../contact/" class="hover:text-green-600">Contact Us</a>
+              <a href="../contact/">Contact</a>
             </li>
             <li>
-              <a href="../gallery/" class="hover:text-green-600">Gallery</a>
+              <a href="../gallery/">Gallery</a>
             </li>
           </ul>
-        </nav>
-      </header>
-      <div class="m-auto md:mx-32 mx-6">
-        <h1 class="text-center text-5xl text-white font-extrabold" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1100">
-          About Us
-        </h1>
-      </div>
-    </section>
-  </section>
-  <!-- End Header -->
+        </div>
+      </section>
 
-  <section class="px-6 md:px-12 py-24 block md:flex relative overflow-hidden">
-    <img src="../images/circle assets.svg" alt="asset" class="absolute top-10 -left-2 h-48 opacity-50" data-aos="slide-right" data-aos-duration="1100">
-    <img src="../images/circle assets diagonal.svg" alt="asset" class="absolute -bottom-0 -right-12 h-24 opacity-50" data-aos="slide-down" data-aos-duration="1100">
-    <img src="../images/circle assets diagonal.svg" alt="asset" class="absolute bottom-24 -right-12 h-24 opacity-50" data-aos="slide-down" data-aos-duration="1100">
-    <div class="w-full md:w-2/3 px-4 md:px-24">
-      <p class="text-justify">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quibusdam molestiae quis blanditiis dolor nostrum odio qui voluptatibus, distinctio delectus quasi aspernatur animi temporibus sunt magni impedit necessitatibus atque ipsa.
-        Ad maxime aperiam, non voluptate labore sunt ipsum at in veritatis aspernatur nihil nulla excepturi sequi inventore adipisci corporis dolorum, accusantium assumenda necessitatibus! Facilis commodi accusantium doloribus quae explicabo magni.
-        At fugiat, quis qui nihil ab sed et sit labore maxime esse corporis reiciendis deleniti commodi eius deserunt quo ea repudiandae, consequatur magnam illum aliquid perspiciatis nostrum non illo! Rerum!
-        Maiores architecto, ut quisquam nemo consequuntur labore et at deleniti laboriosam quia sint quas? Voluptate minus ad facere similique animi aspernatur, saepe quia iste delectus, commodi magnam culpa, aut ipsa.
-      Exercitationem neque sequi corporis unde, reprehenderit ipsum quasi? Obcaecati quisquam reprehenderit consequuntur placeat doloremque dignissimos at facilis cupiditate cum sunt perspiciatis expedita molestiae, vitae voluptatem atque eligendi modi sequi mollitia!
-      Et, doloremque tempora asperiores, quia ullam magnam facilis ab nihil deserunt hic quas ipsa? Non dicta nam inventore placeat consequuntur incidunt necessitatibus, id quia recusandae earum, atque commodi adipisci voluptates?
-      Architecto voluptate voluptatum aperiam! Eos pariatur tempora aut nobis natus reiciendis modi, sunt nihil suscipit soluta. Ducimus maiores harum, a voluptas cupiditate alias et eveniet libero nesciunt pariatur vel nisi!
-      Optio quo pariatur vitae vero laboriosam neque illum temporibus incidunt quaerat fugit sequi animi rerum, minima delectus harum unde reiciendis. Porro, repellendus ab. Modi quaerat nulla autem, iste possimus assumenda.
-      Exercitationem minus inventore, quis error eius iure ratione voluptate doloremque impedit, incidunt accusantium! Necessitatibus cum, deleniti nostrum laborum, assumenda aspernatur dicta esse, ab dolorem ratione corporis iure. Dolore, est consectetur.
-      Vitae magni dolorem repudiandae sed nemo natus, hic doloribus, iure ut veritatis atque temporibus reiciendis quasi eos dolore consequatur. Eligendi, explicabo. Aperiam odio nobis ab nihil dolores harum totam deleniti.
-      Suscipit explicabo accusantium aliquam vero dolores delectus sit labore animi nostrum, aspernatur expedita voluptatibus totam modi beatae et perferendis atque aliquid quam ratione minima fuga incidunt? Eveniet ea ipsam dolores.
-      Accusantium, nemo voluptatem quis voluptatum fugit consequuntur placeat perferendis repellendus sapiente, velit quas magnam! Enim, dolore iste consequatur iure aspernatur rerum nobis neque in libero harum saepe maxime laboriosam nostrum!
-      Repellat asperiores impedit dolor nesciunt omnis facere, ipsa voluptate odit laborum earum distinctio libero cumque illum quos eaque laboriosam expedita voluptas vero nihil tenetur corrupti modi! Debitis quae tenetur nihil?
-      Neque nihil expedita rerum repellendus numquam vel doloribus corporis debitis vero quisquam sit placeat officia, ea unde, sunt eius reprehenderit iste vitae natus fugiat excepturi optio incidunt! Officia, sint facere?
-      Laborum esse aperiam autem asperiores quam ut reiciendis recusandae perferendis neque repellat consectetur, doloribus aspernatur quasi tempore natus fugit voluptatem harum beatae voluptates deleniti rem minima aliquam officiis ex. Corrupti.
-    </p>
+      <div class="p-8 text-center mt-16">
+        <p class="text-sm">Copyright (c) Christ Redeemer's International School 2021</p>
+      </div>
+    </footer>
   </div>
-    <div class="w-full md:w-1/3 block md:flex md:flex-col justify-between space-y-8 md:space-y-0 mt-8 md:mt-0">
-      <img src="https://source.unsplash.com/9rBmRhysF9Y/1920x1280" alt="" class="rounded-xl shadow-lg w-full" data-aos="slide-up" data-aos-duration="1100">
-      <img src="https://source.unsplash.com/qIu77BsFdds/1920x1280" alt="" class="rounded-xl shadow-lg w-full" data-aos="slide-down" data-aos-duration="1100">
-    </div>
-  </section>
 
-  <!-- Block Quote -->
-  <section class="my-32 relative px-12 md:px-24 overflow-x-hidden">
-    <div class="absolute"  data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="30">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 opacity-10" viewBox="0 0 24 24">
-        <path
-          d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
-      </svg>
-    </div>
-    <hr class="w-32 md:w-64 border-2 border-primary mx-auto" data-aos="zoom-out" data-aos-duration="1400" data-aos-delay="10">
-    <p class="text-center text-3xl md:text-5xl font-medium mt-12 leading-normal mb-12" data-aos="fade">When you educate one person you can change a life, when you educate many you can change the world</p>
-    <p class="text-lg italic text-center" data-aos="zoom-in" data-aos-delay="10">Shai Reshef</p>
-  </section>
-
-  <footer class="bg-black block text-gray-100">
-    <section class="px-8 pt-16 mb-6 block md:flex md:mx-12 mx-6 ">
-      <div class="md:w-2/3">
-        <img src="../images/logo.png" alt="CRISS Logo" class="h-24">
-        <h4 class="font-bold text-2xl mt-5">Christ Redeemer's <br /> International Secondary School</h4>
-        <p class="text-sm italic">Moto: Faith, Holiness and Knowledge</p>
-      </div>
-
-      <div class="mt-12 md:mt-0">
-        <h4 class="font-bold text-xl">Links</h4>
-        <ul class="space-y-3 mt-3">
-          <li>
-            <a href="../" >Home</a>
-          </li>
-          <li>
-            <a href="./" class="font-extrabold">About Us</a>
-          </li>
-          <li>
-            <a href="../contact/" >Contact</a>
-          </li>
-          <li>
-            <a href="../gallery/" >Gallery</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <div class="p-8 text-center mt-16">
-      <p class="text-sm">Copyright (c) Christ Redeemer's International School 2021</p>
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
       once: true,
     });
   </script>
+  <script>
+    new fullpage('#fullpage', {
+      //options here
+      autoScrolling: true,
+      scrollHorizontally: true
+    });
+  </script>
+  
 
 </body>
+
 </html>

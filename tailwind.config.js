@@ -1,12 +1,12 @@
 module.exports = {
-  enabled: true,
+  // enabled: true,
   mode: 'all',
   purge: [
     // "src/tailwind.css", 
-    "contact/index.html",
-    "gallery/index.html",
-    "about/index.html",
-    "index.html"
+    // "contact/index.html",
+    // "gallery/index.html",
+    // "about/index.html",
+    // "index.html"
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -30,7 +30,9 @@ module.exports = {
         "primary": "#00a843",
         "secondary": "#340e71",
         "accent": "#fff700",
-        "background": "#fdfcfa"
+        "background": "#fdfcfa",
+        "startgradient": "#5200ae",
+        "endgradient": "#4062bb"
       },
       zIndex: {
         'n1': -1,
@@ -46,6 +48,6 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss'),
-    require('autoprefixer'),
+    // require('autoprefixer'),
   ],
 }
