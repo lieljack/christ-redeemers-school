@@ -55,3 +55,10 @@ body {
 		display: block;
 	}
 }
+
+/* Using floats */
+.grid-col {
+  float: left;
+  width: 50%;
+  padding-right: 1em;
+}
